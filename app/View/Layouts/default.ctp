@@ -15,19 +15,6 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
-				<div class="collapse navbar-collapse" id="navbarsExample03">
-					<ul class="navbar-nav me-auto mb-2 mb-sm-0">
-					
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Pessoas</a>
-							<ul class="dropdown-menu">
-							<li><a class="dropdown-item" href="#">Listar</a></li>
-							<li><a class="dropdown-item" href="#">Adicionar</a></li>
-							</ul>
-						</li>
-					</ul>					
-				</div>
 			</div>
 		</nav>
 		<?php echo $this->Flash->render(); ?>
@@ -60,6 +47,9 @@
 		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/imask"></script>
+		<script>
+			const BASE_URL = '<?php echo $this->webroot; ?>';
+		</script>
 		<?php
 			$jsFile = WWW_ROOT."js".DS.$this->params['controller'].DS.$this->params['action'].".js";
 			echo file_exists($jsFile) ? $this->Html->script($this->params['controller'].'/'.$this->params['action']) : '';

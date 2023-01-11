@@ -18,7 +18,7 @@ function getPessoa(ID_PESSOA){
             } 
         }
     }
-    request.open('GET', '/teste-dz-cakephp/pessoas/getPessoa/'+ID_PESSOA , true);
+    request.open('GET', BASE_URL+'pessoas/getPessoa/'+ID_PESSOA , true);
     request.send();
 }
 
@@ -97,7 +97,7 @@ function deletePessoa(ID_PESSOA) {
             } 
         }
     }
-    request.open('GET', '/teste-dz-cakephp/pessoas/deletar/'+ID_PESSOA , true);
+    request.open('GET', BASE_URL+'pessoas/deletar/'+ID_PESSOA , true);
     request.send();
 }
 
