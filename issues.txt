@@ -1,0 +1,6 @@
+# pegar a url para o ajax dentro do javascript com uma variável
+# máscara nos campos do formulário
+# fazer a busca ou remover o campo
+# deletar pessoa
+# adicionar pessoa
+# Médica na tabela profissoes tá com utf errado
