@@ -119,6 +119,7 @@ function postPessoa() {
                 pessoaInserirModal.hide()
                 actionButtons()
                 form.reset()
+                resetValidation()
                 toastSuccess("<strong>Pessoa inserida com sucesso!</strong>")
             }else if(this.status == 400){
                 let respostaHtml = '<strong>Houve erros no formulário:</strong> <br>'
@@ -138,6 +139,12 @@ function postPessoa() {
         }
     }
     xhttp.send(data);
+}
+
+function resetValidation(){
+    document.querySelectorAll('.is-invalid').forEach( function(item) {
+        item.classList.remove('is-invalid')
+    });
 }
 
 function toastError(mensagem) {    
